@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BruteForce {
-	public ArrayList<Integer> findMaxSubarray(ArrayList<Integer> a) {
+	static ArrayList<Integer> findMaxSubarray(ArrayList<Integer> a) {
 		int sum = 0;
 		int max = 0;
 		ArrayList<Integer> maxArray = new ArrayList<Integer>();
@@ -15,7 +15,7 @@ public class BruteForce {
 			ArrayList<Integer> array = new ArrayList<Integer>();
 			//array.add(a.get(i));
 			
-			sum = sum + a.get(i);
+			//sum = sum + a.get(i);
 			
 			for(int j = i; j < a.size(); j++) {
 				
@@ -26,8 +26,8 @@ public class BruteForce {
 					//System.out.println("Max Before: " + max);
 					max = sum;
 					//System.out.println("Max After: " + max);
-					maxArray = array;
-					answer = maxArray;
+					maxArray = new ArrayList<Integer>(array);
+					answer = new ArrayList<Integer>(maxArray);
 					answer.add(max);
 					sum = 0;
 				}
@@ -35,7 +35,7 @@ public class BruteForce {
 		}
 		return answer;
 	}
-	public int sum(ArrayList<Integer> a) {
+	static int sum(ArrayList<Integer> a) {
 		int sum = 0;
 		for(int i = 0; i<a.size();i++) {
 			sum = sum + a.get(i);
@@ -67,7 +67,6 @@ public class BruteForce {
 			}else {
 				System.out.println("Index: " + al2.get(i));
 			}
-			
 		}
 	}
 
