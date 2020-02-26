@@ -71,6 +71,8 @@ public class BruteForce {
 		for(int i = 0; i < arr.size()-1;i++) 
 			System.out.println("Index: " + arr.get(i));
 		System.out.println("Sum: " + arr.get(arr.size()-1));
+		
+		scan.close();
 	}
 
 }
